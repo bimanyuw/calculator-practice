@@ -31,7 +31,7 @@ h1 { margin: 0; font-size: 26px; }
   text-align: right;
 }
 .history { min-height: 22px; font-size: 14px; color: #68778b; overflow-wrap: anywhere; }
-output { display: block; font-size: 36px; font-weight: 600; overflow-wrap: anywhere; }
+output { display: block; font-size: 36px; font-weight: 600; color: #16a34a; overflow-wrap: anywhere; }
 .keys { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
 button {
   min-width: 0;
@@ -52,15 +52,13 @@ button:focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }
 .equals { background: #2563eb; color: white; }
 .equals:hover { background: #1d4ed8; }
 .zero { grid-column: span 2; }
-.owner-label { display: block; margin-top: 20px; color: #fff; font-size: 13px; font-weight: 600; }
-.owner-input {
-  width: 100%;
-  margin-top: 8px;
-  padding: 11px 12px;
-  border: 2px solid #f2f5fa;
-  border-radius: 10px;
-  background: #fff;
-  color: #203047;
-  font: 14px system-ui, sans-serif;
+.scientific {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #e1e8f3;
 }
-.owner-input:focus { outline: 3px solid #2563eb; outline-offset: 2px; }
+.scientific h2 { margin: 0 0 12px; font-size: 15px; color: #68778b; }
+.scientific-keys { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.scientific-keys button { height: 42px; border-radius: 10px; font-size: 15px; color: #16723a; background: #e9f7ee; }
+.scientific-keys button:hover { background: #d6f0df; }
+.hint { margin: 20px 0 0; color: #68778b; font-size: 11px; text-align: center; }

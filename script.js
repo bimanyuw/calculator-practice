@@ -81,12 +81,48 @@ function action(name) {
   render();
 }
 
+function scientificAction(name) {
+  if (name === 'clear') return clear();
+  if (current === 'Error') return;
+  if (name === 'pi') {
+    current = String(Number(Math.PI.toPrecision(12)));
+    freshInput = true;
+    history.textContent = 'π';
+    render();
+    return;
+  }
+
+  const value = Number(current);
+  const angle = value * Math.PI / 180;
+  const functions = {
+    sin: Math.sin(angle),
+    cos: Math.cos(angle),
+    tan: Math.tan(angle),
+    sqrt: value >= 0 ? Math.sqrt(value) : NaN,
+    square: value ** 2,
+    reciprocal: value === 0 ? NaN : 1 / value,
+    log: value > 0 ? Math.log10(value) : NaN,
+    ln: value > 0 ? Math.log(value) : NaN
+  };
+  const result = functions[name];
+  current = Number.isFinite(result) ? String(Number(result.toPrecision(12))) : 'Error';
+  history.textContent = `${name}(${value})`;
+  if (current === 'Error') history.textContent = 'Hasil tidak valid untuk angka tersebut.';
+  freshInput = true;
+  render();
+}
+
 document.querySelector('.keys').addEventListener('click', (event) => {
   const button = event.target.closest('button');
   if (!button) return;
   if (button.dataset.number !== undefined) inputNumber(button.dataset.number);
   else if (button.dataset.operator) selectOperator(button.dataset.operator);
   else action(button.dataset.action);
+});
+
+document.querySelector('.scientific-keys').addEventListener('click', (event) => {
+  const button = event.target.closest('button');
+  if (button) scientificAction(button.dataset.scientific);
 });
 
 document.addEventListener('keydown', (event) => {

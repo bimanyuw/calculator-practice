@@ -36,8 +36,22 @@
       <button data-number=".">.</button>
       <button class="equals" data-action="equals" aria-label="Sama dengan">=</button>
     </div>
-    <label class="owner-label" for="owner-name">Nama pemilik kalkulator</label>
-    <input class="owner-input" id="owner-name" type="text" placeholder="Masukkan nama" autocomplete="name">
+    <section class="scientific" aria-labelledby="scientific-title">
+      <h2 id="scientific-title">Scientific</h2>
+      <div class="scientific-keys" aria-label="Fungsi scientific">
+        <button data-scientific="sin">sin</button>
+        <button data-scientific="cos">cos</button>
+        <button data-scientific="tan">tan</button>
+        <button data-scientific="sqrt">√</button>
+        <button data-scientific="square">x²</button>
+        <button data-scientific="reciprocal">1/x</button>
+        <button data-scientific="log">log</button>
+        <button data-scientific="ln">ln</button>
+        <button data-scientific="pi">π</button>
+        <button data-scientific="clear">C</button>
+      </div>
+    </section>
+    <p class="hint">Keyboard: Enter = hasil · Esc = bersihkan</p>
   </main>
 </body>
 </html>
