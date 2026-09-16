@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Sederhana</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="calculator">
+    <h1>Kalkulator</h1>
+    <p class="subtitle">Hitung dengan mudah.</p>
+    <div class="screen">
+      <div id="history" class="history"></div>
+      <output id="display" aria-live="polite" aria-label="Hasil perhitungan">0</output>
+    </div>
+    <div class="keys" aria-label="Tombol kalkulator">
+      <button class="clear" data-action="clear">AC</button>
+      <button data-action="delete" aria-label="Hapus digit terakhir">⌫</button>
+      <button data-action="sign" aria-label="Ubah tanda">±</button>
+      <button class="operator" data-operator="/" aria-label="Bagi">÷</button>
+      <button data-number="7">7</button>
+      <button data-number="8">8</button>
+      <button data-number="9">9</button>
+      <button class="operator" data-operator="*" aria-label="Kali">×</button>
+      <button data-number="4">4</button>
+      <button data-number="5">5</button>
+      <button data-number="6">6</button>
+      <button class="operator" data-operator="-" aria-label="Kurang">−</button>
+      <button data-number="1">1</button>
+      <button data-number="2">2</button>
+      <button data-number="3">3</button>
+      <button class="operator" data-operator="+" aria-label="Tambah">+</button>
+      <button class="zero" data-number="0">0</button>
+      <button data-number=".">.</button>
+      <button class="equals" data-action="equals" aria-label="Sama dengan">=</button>
+    </div>
+    <p class="hint">Keyboard: Enter = hasil · Esc = bersihkan</p>
+  </main>
+</body>
+</html>
