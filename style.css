@@ -51,4 +51,15 @@ button:focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }
 .equals { background: #2563eb; color: white; }
 .equals:hover { background: #1d4ed8; }
 .zero { grid-column: span 2; }
-.hint { margin: 20px 0 0; color: #68778b; font-size: 11px; text-align: center; }
+.owner-label { display: block; margin-top: 20px; color: #203047; font-size: 13px; font-weight: 600; }
+.owner-input {
+  width: 100%;
+  margin-top: 8px;
+  padding: 11px 12px;
+  border: 2px solid #f2f5fa;
+  border-radius: 10px;
+  background: #fff;
+  color: #203047;
+  font: 14px system-ui, sans-serif;
+}
+.owner-input:focus { outline: 3px solid #2563eb; outline-offset: 2px; }
