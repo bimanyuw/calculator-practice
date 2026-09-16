@@ -51,4 +51,13 @@ button:focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }
 .equals { background: #2563eb; color: white; }
 .equals:hover { background: #1d4ed8; }
 .zero { grid-column: span 2; }
+.scientific {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #e1e8f3;
+}
+.scientific h2 { margin: 0 0 12px; font-size: 15px; color: #68778b; }
+.scientific-keys { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.scientific-keys button { height: 42px; border-radius: 10px; font-size: 15px; color: #16723a; background: #e9f7ee; }
+.scientific-keys button:hover { background: #d6f0df; }
 .hint { margin: 20px 0 0; color: #68778b; font-size: 11px; text-align: center; }
